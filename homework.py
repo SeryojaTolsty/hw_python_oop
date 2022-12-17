@@ -10,12 +10,11 @@ class InfoMessage:
     distance: float
     speed: float
     calories: float
-    message: str = ('Тип тренировки: {training_type}; '
-                    'Длительность: {duration:.3f} ч.; '
-                    'Дистанция: {distance:.3f} км; '
-                    'Ср. скорость: {speed:.3f} км/ч; '
-                    'Потрачено ккал: {calories:.3f}.'
-                    )
+    message = ('Тип тренировки: {training_type}; '
+               'Длительность: {duration:.3f} ч.; '
+               'Дистанция: {distance:.3f} км; '
+               'Ср. скорость: {speed:.3f} км/ч; '
+               'Потрачено ккал: {calories:.3f}.')
 
     def get_message(self) -> str:
         """"Метод для вывода сообщений на экран"""
@@ -104,9 +103,9 @@ class SportsWalking(Training):
 
 class Swimming(Training):
     """Тренировка: плавание."""
-    COEF_SWIM = 1.1
-    COEF_SWIM2 = 2
-    LEN_STEP = 1.38
+    COEF_SWIM: float = 1.1
+    COEF_SWIM2: int = 2
+    LEN_STEP: float = 1.38
 
     def __init__(self,
                  action: int,
